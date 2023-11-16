@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right bottom, #101039 , #232453);
+}
+
+.container-web{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.outer-head{
+    color: #e2e2e2;
+    font-size: 1.4rem;
+}
+
+.main-container{
+    width: 28%;
+    max-height: 72%;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 2rem;
+    margin: 1.2rem 0;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    gap: .8rem;
+    margin-block: 1.2rem;
+}
+
+form input{
+    height: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(208, 208, 208);
+    outline: none;
+    color: white;
+}
+
+form input:focus{
+    border-bottom: 1.5px solid white;
+}
+
+form input::placeholder{
+    opacity: 100%;
+    color: rgb(208, 208, 208);
+    padding: 6px;
+}
+
+form button{
+    height: 100%;
+    padding: 0 1rem;
+    border-radius: .3rem;
+    border: none;
+    color: white;
+    background: #06064b;
+    cursor: pointer;
+    transition: .3s;
+}
+
+form button:active{
+    transform: scale(.9);
+}
+
+.inner-container{
+    margin: 0 1.5rem;
+}
+
+.weather-condition-date{
+    display: flex;
+    justify-content: space-between;
+    margin: 2.8rem 0 0 0;
+    align-items: center;
+}
+
+.weather-condition-date div{
+    font-size: 1.6rem;
+    color: white;
+}
+
+.weather-condition-date p{
+    color: #afafaf;
+}
+
+.temp-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.temp-container .temp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temp-container .temp h1{
+    color: white;
+    font-size: 2.5rem;
+}
+
+.temp-container .temp p{
+    color: #f7c411;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 0 .6rem .5rem;
+}
+
+.temp-container img{
+    width: 100%;
+}
+
+.location{
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 1rem 0;
+    width: 100%;
+}
+
+.location i{
+    color: #f7c411;
+}
+
+.location p{
+    color: white;
+}
+
+.details{
+    margin-block: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.details div{
+    text-align: center;
+}
+
+.details div p{
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #f7c411;
+}
+
+/* Loading  */
+
+.loading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading{
+    display: none;
+}
+
+.loader {
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+  
+  .loader div {
+    position: absolute;
+    border: 4px solid #454ade;
+    border-radius: 50%;
+    animation: loader8435 1s ease-out infinite;
+  }
+  
+  .loader div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  
+  @keyframes loader8435 {
+    0% {
+      top: 32px;
+      left: 32px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+  
+    100% {
+      top: 0;
+      left: 0;
+      width: 64px;
+      height: 64px;
+      opacity: 0;
+    }
+  }  
+
+  .error{
+    color: #dfdfdf;
+    position: fixed;
+    top: -12%;
+    background-color: rgb(255 19 19 / 30%);
+    padding: .5rem;
+    border-radius: .5rem;
+    box-shadow: 0px 1px 4px #434343;
+    transition: .4s ease;
+  }
+
+  .error-active{
+    top: 16%;
+  }
+
+/* Media Queries  */
+
+@media screen and (max-width:1200px){
+    *{
+        font-size: .9rem;
+    }
+    .main-container{
+        width: 33%;
+       }
+}
+
+@media screen and (max-width:875px){
+   .main-container{
+    width: 35%;
+   }
+}
+
+@media screen and (max-width:750px){
+   .main-container{
+    width: 42%;
+   }
+}
+
+@media screen and (max-width:650px){
+   .main-container{
+    width: 58%;
+   }
+}
+
+@media screen and (max-width:500px){
+   .main-container{
+    width: 70%;
+   }
+}
+
+@media screen and (max-width:422px){
+    .main-container{
+     width:78%;
+    }
+ }

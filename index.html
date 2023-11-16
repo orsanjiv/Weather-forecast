@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather WebApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <script src="https://kit.fontawesome.com/f6b356be29.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <!-- <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <!-- <img src="#" alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
+            Weather Forecating
+          </a>
+        </div>
+      </nav> -->
+<!-- Weather Page -->
+
+    <div class="container-web">
+        <div class="error">
+            <i class="fa-regular fa-face-sad-tear"></i>
+            Error: Please check your input!
+        </div>
+    
+        <div class="outer-head">Weather Forcast</div>
+        <div class="main-container">
+            <form action="">
+                <input id="city-name" type="text" placeholder="Search for City" value="" required>
+                <button type="submit">Search</button>
+                <!-- <button type="/">Go Back</button> -->
+    
+            </form>
+    
+            <div class="loading-container">
+                <div class="loading">
+                    <div class="loader">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="inner-container">
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
